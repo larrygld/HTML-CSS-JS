@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery测试</title>
+    <script src="js/jquery-3.5.1.js"></script>
+
+
+
+</head>
+<body>
+
+    <p id="myp">我是一个段落</p>
+
+    <button id="mybutton" onclick="myshow()">点我</button>
+
+    <br>
+    <input type="checkbox" class="hobby" value="乒乓球" >乒乓球
+    <input type="checkbox" class="hobby" >羽毛球
+    <input type="checkbox" class="hobby" checked="checked" >篮球
+    <button id="mybtn">全选</button>
+
+    <script>
+        $(function () {
+            var flag = true;
+            $("#mybutton").click(
+                function(){
+                    alert("hello")
+                    if(flag){
+                        $("#myp").hide();
+                        flag = false;
+                    }else{
+                        $("#myp").show();
+                        flag = true;
+                    }
+                }
+
+            );
+
+            $("#mybtn").click(
+                function () {
+                    console.log("111");
+                    $(".hobby").each(function () {
+                        console.log(this.value)
+                        $(this).attr("checked", "checked");  //更改checked的属性
+                    })
+                }
+            )
+            
+
+        });
+
+
+
+        //        var flag = true;
+        //        function myshow() {
+        //            alert("hello")
+        //            if(flag){
+        //                $("#myp").hide();
+        //                flag = false;
+        //            }else{
+        //                $("#myp").show();
+        //                flag = true;
+        //            }
+        //        }
+    </script>
+
+
+</body>
+</html>

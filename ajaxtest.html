@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax测试</title>
+
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+
+    <button onclick="login()">登录</button>
+
+    <script>
+
+        function login(){
+            //跨域问题
+            $.ajax({
+                url:'data.txt',
+                //data:{userId:$("#userId").val(),password:$("#password").val()},
+                type:'get',
+                success:function(result){
+                    console.log(result);
+                },
+                error:function(){//执行失败
+                    alert("请稍后再试!");
+                }
+            });
+
+        }
+
+    </script>
+
+
+</body>
+</html>
