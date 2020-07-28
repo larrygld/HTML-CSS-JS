@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>居中测试</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .div-vertical-middle{
+            height:200px;
+            width:304px;
+            line-height:50px;
+            vertical-align:middle;
+            display:table-cell;
+        }
+        .div-horizontal-middle{
+            height:200px;
+            width:304px;
+            line-height:50px;
+            text-align:center;
+            display:table;
+        }
+        .div-middle-out{
+            border:2px solid #000;
+            width:500px;
+            height:500px;
+            margin:50px auto;
+            display:table;
+        }
+        .div-middle-in{
+            text-align:center;
+            display:table-cell;
+            vertical-align:middle;
+        }
+    </style>
+</head>
+<body>
+<div class="div-vertical-middle" style="background:yellow;">
+    <h2>这是垂直居中</h2>
+</div>
+<div class="div-horizontal-middle" style="background:red;">
+    <h2>这是水平居中</h2>
+</div>
+<div class="div-middle-out" style="background:green;">
+    <div class="div-middle-in">
+        <h2>水平垂直居中</h2>
+        <button value="111" style="width: 50px; height: 30px;"></button>
+    </div>
+</div>
+</body>
+</html>
